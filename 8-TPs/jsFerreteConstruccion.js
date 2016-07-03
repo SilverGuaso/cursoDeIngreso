@@ -25,7 +25,7 @@ function Circulo ()
 
 	perimetro=document.getElementById('Radio').value;
 	resultado=(parseInt(perimetro)*Math.PI*2)*3;
-	alert("El perimetro es de "+resultado);
+	alert("La cantidad a comprar es "+resultado+" mts.");
 	
 }
 function Materiales () 
