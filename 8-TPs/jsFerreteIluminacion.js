@@ -10,5 +10,91 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var cantidad;
+ 	var marca;
+ 	cantidad=document.getElementById('Cantidad').value;
+ 	marca=document.getElementById('Marca').value;
+
+ 	if (cantidad>=6)
+ 	 {
+ 	 	var resultado;
+ 	 	resultado=(parseInt(cantidad)*35)*0.50;
+ 	 	document.getElementById('precioDescuento').value=resultado;
+ 	 	if (resultado>=121) 
+ 	 		{
+ 	 			alert("Usted pagó $"+resultado*0.1+" de IIBB. "+" El total asciende a $"+resultado*1.1);
+
+ 	 		}
+ 	 } 
+ 	 else if (cantidad==5 & marca=='ArgentinaLuz')
+ 	  {
+ 	  	var resultado;
+ 	  	resultado=(parseInt(cantidad)*35)*0.6;
+ 	  	document.getElementById('precioDescuento').value=resultado;
+
+ 	  }
+ 	  else if (cantidad==5 & marca!='ArgentinaLuz')
+
+ 	  	 {
+ 	  	 	var resultado;
+ 	  	 	resultado=(parseInt(cantidad)*35)*0.7;
+ 	  	 	document.getElementById('precioDescuento').value=resultado;
+ 	  	 } 
+ 	  	 else if (cantidad==4 & marca=='ArgentinaLuz')
+ 	  	  {
+ 	  	  	var resultado;
+ 	  	  	resultado=(parseInt(cantidad)*35)*0.75;
+ 	  	  	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	
+ 	  	  } 
+ 	  	   else if (cantidad==4 & marca=='FelipeLamparas')
+ 	  	  	 {
+ 	  	  	 	var resultado;
+ 	  	  	 	resultado=(parseInt(cantidad)*35)*0.75;
+ 	  	  	 	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	 }
+ 	  	  	 else if (cantidad==4) 
+ 	  	  	 { 
+ 	  	  	 	var resultado;
+ 	  	  	 	resultado=(parseInt(cantidad)*35)*0.80;
+ 	  	  	 	document.getElementById('precioDescuento').value=resultado;
+
+ 	  	  	 }
+ 	  	  	 else if (cantidad==3 & marca=='ArgentinaLuz')
+ 	  	  	  {
+ 	  	  	  	var resultado;
+ 	  	  	 	resultado=(parseInt(cantidad)*35)*0.85;
+ 	  	  	 	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	  } 
+ 	  	  	  else if (cantidad==3 & marca=='FelipeLamparas')
+ 	  	  	   {
+ 	  	  	   	var resultado;
+ 	  	  	 	resultado=(parseInt(cantidad)*35)*0.90;
+ 	  	  	 	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	   } 
+ 	  	  	   else if (cantidad==3)
+ 	  	  	    {
+ 	  	  	    	var resultado;
+ 	  	  	    	resultado=(parseInt(cantidad)*35)*0.95;
+ 	  	  	    	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	    } 
+ 	  	  	    else if (cantidad==2) 
+ 	  	  	    	{
+ 	  	  	    	var resultado;
+ 	  	  	    	resultado=parseInt(cantidad)*35;
+ 	  	  	    	document.getElementById('precioDescuento').value=resultado; 	  	  	    		
+
+ 	  	  	    	} 
+ 	  	  	    	else if (cantidad==1)
+ 	  	  	    	 {
+ 	  	  	    	 	var resultado;
+ 	  	  	    	 	resultado=parseInt(cantidad)*35;
+ 	  	  	    	 	document.getElementById('precioDescuento').value=resultado;
+ 	  	  	    	 } else if (cantidad==0)
+ 	  	  	    	  {
+ 	  	  	    	  	alert("Ingrese una cantidad válida de lámparas")
+ 	  	  	    	  } 
+
+
+ 	   
 }
