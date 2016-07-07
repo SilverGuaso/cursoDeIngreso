@@ -5,4 +5,6 @@ function Mostar()
 	
 	
 }
+//solo estoy haciendo esto para probar el pull 
+//de git. actualizar desde la nube a la computadora
 
