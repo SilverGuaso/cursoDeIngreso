@@ -15,7 +15,7 @@ function Sumar ()
 	numero3=document.getElementById('PrecioTres').value;
 
 	suma=parseInt(numero1)+parseInt(numero2)+parseInt(numero3);
-	alert("La suma es "+suma);
+	alert("La suma es $"+suma);
 
 
 
@@ -34,7 +34,7 @@ function Promedio ()
 	numero3=document.getElementById('PrecioTres').value;
 	prom=parseInt(numero1)+parseInt(numero2)+parseInt(numero3);
 	prome=parseInt(prom)/3;
-	alert("El promedio es "+prome);
+	alert("El promedio es $"+prome);
 
 
 
@@ -51,7 +51,7 @@ function PrecioFinal ()
 	numero2=document.getElementById('PrecioDos').value;
 	numero3=document.getElementById('PrecioTres').value;
 	suma=parseInt(numero1)*1.21+parseInt(numero2)*1.21+parseInt(numero3)*1.21;
-	alert("El precio final es "+suma);
+	alert("El precio final es $"+suma);
 
 	
 }
