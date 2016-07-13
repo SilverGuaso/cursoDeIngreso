@@ -1,9 +1,21 @@
 function Mostrar()
 {
-//tomo la edad  
-var laHora = document.getElementById('hora').value;
+  
+var hora = document.getElementById('hora').value;
 
-//alert (laHora);
+switch(hora)
+{
+	case '7':alert("Es de Mañana.");
+	break;
+	case '8':alert("Es de Mañana.");
+	break;
+	case '9':alert("Es de Mañana.");
+	break;
+	case '10':alert("Es de Mañana.");
+	break;
+	case '11':alert("Es de Mañana.");
+	break;
+}
 	
 	
 
