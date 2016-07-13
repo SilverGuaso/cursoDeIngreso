@@ -1,38 +1,38 @@
 function Mostrar()
 {
 /*	//Genero el número RANDOM entre 1 y 10 
-	var azar;
-	azar=Math.floor(Math.random()*10+1);
+	var numero;
+	numero=Math.floor(Math.random()*10+1);
 
-	if (azar>=9) 
+	if (numero>=9) 
 		{
-			alert("Nota: "+azar+" Excelente!");
-		} else if (azar>=4 && azar<=8)
+			alert("Nota: "+numero+" Excelente!");
+		} else if (numero>=4 && numero<=8)
 		 {
-		 	alert("Nota: "+azar+" Aprobó!");		
-		 } else if (azar<=3)
+		 	alert("Nota: "+numero+" Aprobó!");		
+		 } else if (numero<=3)
 		  {
-		  	alert("Nota: "+azar+" Vamos, la próxima se puede!")
+		  	alert("Nota: "+numero+" Vamos, la próxima se puede!")
 		  } 
 */
-	var azar;
-	azar=Math.floor(Math.random()*10+1);
+	var numero;
+	numero=Math.floor(Math.random()*10+1);
 
-	if (azar<9)
+	if (numero<9)
 	 {
-	 	if (azar>3)
+	 	if (numero>3)
 	 	 {
-	 	 	alert("Nota: "+azar+" Aprobó!");
+	 	 	alert("Nota: "+numero+" Aprobó!");
 
 	 	 }
 	 	 else
 	 	 {
-	 	 	alert("Nota: "+azar+" Vamos, la proxima se puede!");
+	 	 	alert("Nota: "+numero+" Vamos, la proxima se puede!");
 	 	 }
 	 }
 	 else
 	 {
-	 	alert("Nota: "+azar+" Excelente!");
+	 	alert("Nota: "+numero+" Excelente!");
 	 }
 
 
