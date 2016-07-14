@@ -106,59 +106,114 @@ cantidad=document.getElementById('Cantidad').value;
 marca=document.getElementById('Marca').value;
 precioBruto=35*cantidad;
 
-switch(marca)
-{
-	case "ArgentinaLuz":
-	if (cantidad==3)
-	 {
-	 	descuento=0.85;
-	 }
-	 else
-	 {
-	 	if (cantidad==4)
-	 	 {
-	 	 	descuento=0.75;
-	 	 }
-	 	 else 
+switch(marca) 
+	{	//abre ArgentinaLuz
+		case "ArgentinaLuz":
+		if (cantidad==3)
+		 {
+	 		descuento=0.85;
+	 	}
+	 	else
+	 	{
+	 		if (cantidad==4)
+	 		 {
+	 		 	descuento=0.75;
+	 		 }
+	 		 else 
 
-	 	 {
-	 	 	if (cantidad==5)
 	 	 	{
-	 	 		descuento=0.60;
-	 		}
+	 	 		if (cantidad==5)
+	 	 		{
+	 	 			descuento=0.60;
+	 			}
+	 			else
+	 			{
+	 				if (cantidad>5)
+	 			 	{
+	 			 		descuento=0.50;
+	 			 	}
+	 			 	else
+	 			 	{
+	 			 		descuento=1;
+	 			 	}
+	 			}	
+	 	 	}
+	 	}
+	 	
+		break;//cierra marca ArgentinaLuz
+		//abre FelipeLamparas
+		case "FelipeLamparas":
+		if (cantidad==3)
+		 {
+	 		descuento=0.9;
+	 	}
+	 	else
+	 	{
+	 		if (cantidad==4)
+	 	 	{
+	 	 		descuento=0.75;
+	 	 	}
+	 	 	else
+	 	 	{
+	 	 		if (cantidad==5)
+	 	 		 {
+	 	 		 	descuento=0.70;
+	 	 		 }
+	 	 		 else
+	 	 		 {
+	 	 		 	if (cantidad>5)
+	 			 	 {
+	 	 	 	 		descuento=0.50;
+	 	 	 	 	}
+	 	 	 	 	else
+	 	 	 	 	{
+	 	 	 	 		descuento=1;
+	 	 	 	 	}
+	 	 	 	}
+	 	 	}
+	 	}
 
-	 	 }
+	 	break;//cierra marca FelipeLamparas
+	 	//abre las demas marcas
+	 	default:
+	 	if (cantidad<6)
+	  	{
+	  		switch(cantidad)
+	  		{ 
+	  			case "5":
+	  			descuento=0.70;
+	  			break;
+	  			case "4":
+	  			descuento=0.80;
+	  			break;
+	  			case "3":
+	  			descuento=0.95;
+	  			break;
+	  			default:
+	  			descuento=1;
+
+	  		}
+	  
+	  	}
+	  	else
+	  	{
+	  		descuento=0.50;
+	  	}
+	  	//aca se cierra el default (que son las demas marcas) por que no lleva break
+	}//cierra el switch (marca)
+		
+
+	precioNeto=precioBruto*descuento;
+	 	
+	 if (precioNeto>120)
+	 {
+	 	 alert("Usted pagó: $"+precioNeto*0.10+" de IIBB");
+	 	 document.getElementById('precioDescuento').value="$"+precioNeto*1.10;//Sumandole IIBB
 	 }
-	 	precioNeto=precioBruto*descuento;
-	 	document.getElementById('precioDescuento').value=precioNeto;
-	break;
-
-	case "FelipeLamparas":
-
-}//hacer ejercicio con switch y con IF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	  else
+	 {
+	 	 document.getElementById('precioDescuento').value="$"+precioNeto;//Sin sumar IIBB
+	 }
 
 
 }
