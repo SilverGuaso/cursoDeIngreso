@@ -9,18 +9,40 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+contadorIntentos=1;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
+	numeroSecreto=Math.floor(Math.random()*100)+1;//Genero el número RANDOM entre 1 y 100
 	 
-		//alert(numeroSecreto );
-	
-
+	//alert(numeroSecreto);	//alert(numeroSecreto );
 }
 
 function verificar()
 {
-	
-	
+	var numero;
+	numero=document.getElementById('numero').value;
+	var numerosuperior;
+	var numeroinferior;
+	while(numero!=numeroSecreto)
+	{
+		document.getElementById('intentos').value=contadorIntentos++
+		if (numero>numeroSecreto)
+		 {
+		 	numerosuperior=parseInt(numero)-parseInt(numeroSecreto);
+		 	alert("Se pasó "+numerosuperior+" Números.");
+		 	numero=prompt("Ingrese otro numero");
+		 }
+		 else
+		 {
+		 	numeroinferior=parseInt(numeroSecreto)-parseInt(numero);
+		 	alert("Le faltaron "+numeroinferior+" Números");
+		 	numero=prompt("Ingrese otro numero");
+		 }	
+	}
+
+	alert("Usted adivinó el Numero Secreto: "+numero+" en "+contadorIntentos+" intentos.");
+	document.getElementById('intentos').value=contadorIntentos;
 }
+/*Una vez finalizado el juego. si vuelvo a comenzarlo sin recargar la pagina, el contador de intentos
+no vuelve a 0. continua en el valor que habia quedado al finalizar el juego anterior*/
