@@ -43,6 +43,7 @@ function verificar()
 
 	alert("Usted adivinó el Numero Secreto: "+numero+" en "+contadorIntentos+" intentos.");
 	document.getElementById('intentos').value=contadorIntentos;
+	document.getElementById('numero').value=numero;
 }
 /*Una vez finalizado el juego. si vuelvo a comenzarlo sin recargar la pagina, el contador de intentos
 no vuelve a 0. continua en el valor que habia quedado al finalizar el juego anterior*/
