@@ -12,11 +12,15 @@ function ComenzarIngreso ()
 	var edad;
 	var sexo;
 	var estado;
-	edad=prompt("ingrese su edad");
+	edad=0;
+  estado=0;
 	while(edad<18 || edad>90)
 	{
-		alert("Reingrese su edad");
-		edad=prompt("ingrese su edad");
+		edad=prompt("ingrese edad válida");
+    while(isNaN(edad))
+    {
+      edad=prompt("Su edad debe estar en numeros","23");
+    }
 
 	}
 	document.getElementById('Edad').value=edad+" Años";
@@ -35,11 +39,14 @@ function ComenzarIngreso ()
  		default:document.getElementById('Sexo').value="Femenino";
  	}
 
- 	estado=prompt("Estado Civil. Ingrese: 1 Soltero. 2 Casado. 3 Divorciado. 4 Viudo","1, 2, 3, o 4");
+ 	
  	while(estado<1 || estado>4)
  	{
- 		alert("Estado Civil. Ingrese: 1 Soltero. 2 Casado. 3 Divorciado. 4 Viudo","1, 2, 3, o 4");
  		estado=prompt("Estado Civil. Ingrese: 1 Soltero. 2 Casado. 3 Divorciado. 4 Viudo","1, 2, 3, o 4");
+    while(isNaN(estado))
+    {
+      estado=prompt("Estado Civil. Ingrese: 1 Soltero. 2 Casado. 3 Divorciado. 4 Viudo","1, 2, 3, o 4");
+    }
  	}
  	switch(estado)
  	{
@@ -53,20 +60,26 @@ function ComenzarIngreso ()
  		
   	}
   	var sueldo;
-  	sueldo=prompt("Ingrese su sueldo bruto");
+  	sueldo=0;
   	while(sueldo<=8000)
   	{
-  		alert("ingrese su SUELDO");
-  		sueldo=prompt("Ingrese su sueldo bruto");
+  		sueldo=prompt("Ingrese su sueldo bruto mayor a $8000");
+      while(isNaN(sueldo))
+      {
+        sueldo=prompt("Ingrese su sueldo bruto en numeros");
+      }
   	}
   	document.getElementById('Sueldo').value="$"+sueldo;
   	
   	var legajo;
-  	legajo=prompt("Ingrese Nº de legajo.");
+  	legajo=0;
   	while(legajo<1000 || legajo>9999)
   	{
-  		alert("Ingrese su Nº de legajo, SIN CEROS A LA IZQUIERDA y solo CUATRO CIFRAS");
   		legajo=prompt("Ingrese Nº de legajo.");
+      while(isNaN(legajo))
+      {
+        legajo=prompt("Ingrese Nº de legajo. En Números");
+      }
   	}
   	document.getElementById('Legajo').value="Leg. Nº "+legajo;
 
