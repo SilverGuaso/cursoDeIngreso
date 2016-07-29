@@ -41,10 +41,7 @@ function Mostar() //SEGUNDO EJERCICIO DEL PARCIAL
 	var promedio;
 	var contadorM;
 	contadorM=0;
-	var acumuladorM;
-	acumuladorM=0;
-	var promedioM;
-
+	
 	while(contador<10)
 	{
 		contador++;
@@ -59,7 +56,7 @@ function Mostar() //SEGUNDO EJERCICIO DEL PARCIAL
 		{
 			sexo=prompt("ReIngrese su sexo","M o F");
 		}
-		if (nota<=6 && sexo=="M")
+		if (nota>=6 && sexo=="M")
 		 {
 		 	contadorM++;
 		 	
@@ -69,7 +66,7 @@ function Mostar() //SEGUNDO EJERCICIO DEL PARCIAL
 	alert("El promedio de nota es de "+promedio);
 	if (contadorM>0)
 	 {
-	 	alert("La cantidad de hombres con nota igual o menor a seis es: "+contadorM);
+	 	alert("La cantidad de hombres con nota igual o mayor a seis es: "+contadorM);
 	 }
 	
 }

@@ -2,6 +2,7 @@
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+/*
 function sumar()
 {	
 	var numero1;
@@ -56,5 +57,37 @@ function dividir()
 	resultado=parseInt(numero1)/parseInt(numero2);
 	alert("La división es de "+resultado);
 	
+}
+*/
+var numero;//TERCER EJERCICIO PARCIAL
+var acumulador;
+acumulador=0;
+var contador;
+contador=0;
+var contadorPares;
+contadorPares=0;
+var promedio;
+
+function sumar()
+{	
+	contador++;
+	numero=prompt("ingrese un numero");
+	while(numero<0)
+	{
+		numero=prompt("ingrese un numero positivo");
+	}
+	acumulador=acumulador+parseInt(numero);
+	if (numero%2==0)
+	 {
+	 	contadorPares++;
+	 }
+	 promedio=acumulador/contador;
+}
+
+function restar()
+{
+	document.write(contadorPares+" Numeros pares ingresados"+" El promedio es "+promedio+" La suma de los numeros es "+acumulador);
+	
+		
 }
 
